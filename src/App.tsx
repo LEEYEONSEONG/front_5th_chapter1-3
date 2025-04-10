@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 
 import { Header } from "./components/Header";
 import { ItemList } from "./components/ItemList";
@@ -9,9 +9,10 @@ import { ThemeProvider, useTheme } from "./contexts/ThemeContext";
 import { UserProvider } from "./contexts/UserContext";
 import { NotificationProvider } from "./contexts/NotificationContext";
 
+import { useCallback } from "./@lib";
 import { generateItems } from "./utils";
 
-const App: React.FC = () => {
+const App = () => {
   const [items, setItems] = useState(() => generateItems(1000));
 
   const addItems = useCallback(() => {

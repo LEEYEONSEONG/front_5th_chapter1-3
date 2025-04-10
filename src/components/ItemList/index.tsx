@@ -1,7 +1,8 @@
-import { useState, useMemo, memo } from "react";
+import { useState, memo } from "react";
 
 import { useTheme } from "../../contexts/ThemeContext";
 
+import { useMemo } from "../../@lib";
 import { renderLog } from "../../utils";
 
 interface IItem {
